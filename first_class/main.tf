@@ -1,23 +1,23 @@
-terraform{
-  required_version = "0.14.4"
-    required_providers {
-      aws ={
-        source = "hashicorp/aws"
-        version = "5.88.0"
-      }
+terraform {
+ # required_version = "0.14.4"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.88.0"
     }
+  }
 }
 
-provider "aws"{
-   region = "us-east-1"
-  }
+provider "aws" {
+  region = "us-east-1"
+}
 
-  resource "aws_s3_bucket" "bucket-test" {
+resource "aws_s3_bucket" "bucket-test" {
   bucket = "bucket-test-12081995"
 
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
-    Managedby="Terraform"
+    Managedby   = "Terraform"
   }
 }
