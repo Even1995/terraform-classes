@@ -1,3 +1,7 @@
+variable "enviroment"{
+    type = string
+    description = ""
+}
 variable "aws_region" {
     type = string
     description = ""
@@ -13,7 +17,6 @@ variable "aws_profile"{
 variable "instance_ami"{
     type = string
     description = ""
-    default = "AMI 2023.6.20250218.2"
 }
 
 variable "instance_type"{
